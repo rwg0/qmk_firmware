@@ -8,8 +8,8 @@
         "max_power": 100
     },
     "features": {
-        "bootmagic": true,
-        "mousekey": true,
+        "bootmagic": false,
+        "mousekey": false,
         "extrakey": true,
         "nkro": true
     },
