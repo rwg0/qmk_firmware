@@ -24,7 +24,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 layer_state_t layer_state_set_user(layer_state_t state) {
     // interestingly had to set the one I wanted on to 0 and the rest to 1 (for off)
     switch (get_highest_layer(state)) {
-      case L1:
+      case 1:
           // For Layer 1 set numlock led on
           writePin(LED_COMPOSE_PIN, 0);     
           break;      
