@@ -2,8 +2,8 @@
 
 Forked from https://github.com/qmk/qmk_firmware
 
-Fixes slow boot issue with the kint keyboard device on Teensy 4.1 with a 1-line fix that qmk seem not to want to include :(
-Adds support for showing the keypad LED on kinesis when in layer 1 in custom keymap at keyboard/kinesis/kint41/keymaps/robin/keymap.c
+* Fixes slow boot issue with the kint keyboard device on Teensy 4.1 with a 1-line fix that qmk seem not to want to include :(
+* Adds support for showing the keypad LED on kinesis when in layer 1 in custom keymap at keyboard/kinesis/kint41/keymaps/robin/keymap.c
 
 # Quantum Mechanical Keyboard Firmware
 
