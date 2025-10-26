@@ -9,4 +9,5 @@ ARMV = 7
 # Bootloader selection
 BOOTLOADER = halfkay
 
-FIRMWARE_FORMAT = hex
+FIRMWARE_FORMAT = hex 
+OPT_DEFS += -DCORTEX_ENABLE_WFI_IDLE=FALSE
