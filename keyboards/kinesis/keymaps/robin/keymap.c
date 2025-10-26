@@ -21,3 +21,26 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 #    include OTHER_KEYMAP_C
 #endif // OTHER_KEYMAP_C
 
+layer_state_t layer_state_set_user(layer_state_t state) {
+    // interestingly had to set the one I wanted on to 0 and the rest to 1 (for off)
+    switch (get_highest_layer(state)) {
+      case L1:
+          // For Layer 1 set numlock led on
+          writePin(LED_COMPOSE_PIN, 0);     
+          break;      
+      default:
+          // set off
+          writePin(LED_COMPOSE_PIN, 1);
+    }
+  return state;
+}
+
+bool led_update_user(led_t led_state) {
+    // you need to implement this method and return false otherwise it will overwrite what happened in layer_state_set_user
+
+    // we want caps lock to keep working as is:
+    writePin(LED_CAPS_LOCK_PIN, !led_state.caps_lock);
+    writePin(LED_NUM_LOCK_PIN, !led_state.num_lock);
+    writePin(LED_SCROLL_LOCK_PIN, !led_state.scroll_lock);
+    return false;
+}
